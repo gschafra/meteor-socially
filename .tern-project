@@ -1,0 +1,41 @@
+{
+  "ecmaVersion": 6,
+  "ide": {
+    "scriptPaths": [
+      {
+        "type": "FOLDER",
+        "path": "client"
+      },
+      {
+        "type": "FOLDER",
+        "path": "imports"
+      },
+      {
+        "type": "FOLDER",
+        "path": "server"
+      }
+    ]
+  },
+  "plugins": {
+    "guess-types": {
+      
+    },
+    "outline": {
+      
+    },
+    "node": {
+      
+    },
+    "node-mongodb-native": {
+      
+    },
+    "meteor": {
+      
+    }
+  },
+  "libs": [
+    "browser",
+    "jquery",
+    "ecma5"
+  ]
+}
