@@ -23,6 +23,9 @@
     "outline": {
       
     },
+    "es_modules": {
+      
+    },
     "node": {
       
     },
@@ -34,8 +37,8 @@
     }
   },
   "libs": [
+    "ecma5",
     "browser",
-    "jquery",
-    "ecma5"
+    "jquery"
   ]
 }
