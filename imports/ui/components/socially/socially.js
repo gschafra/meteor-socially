@@ -1,6 +1,9 @@
 import angular from 'angular';
 import angularMeteor from 'angular-meteor';
 import uiRouter from 'angular-ui-router';
+import 'angular-animate';
+import 'angular-sanitize';
+import 'ionic-scripts';
 
 import template from './socially.html';
 import { name as PartiesList } from '../partiesList/partiesList';
@@ -14,6 +17,7 @@ const name = 'socially';
 export default angular.module(name, [
   angularMeteor,
   uiRouter,
+  'ionic',
   PartiesList,
   PartyDetails,
   Navigation
