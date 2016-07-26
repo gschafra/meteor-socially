@@ -1,5 +1,5 @@
 <party-add></party-add>
-<ul>
+<!-- <ul>
   <li ng-repeat="party in partiesList.parties">
     <a ui-sref="partyDetails({ partyId: party._id })">
       {{party.name}}
@@ -7,4 +7,17 @@
     <p>{{party.description}}</p>
     <party-remove party="party"></party-remove>
   </li>
-</ul>
+</ul> -->
+<ion-list id="partiesListPage-list1" class=" ">
+    <ion-item ng-repeat="party in partiesList.parties" class="item-icon-right" id="partiesListPage-list-item{{$index + 1}}">
+	    <a ui-sref="partyDetails({ partyId: party._id })">
+	      {{party.name}}
+	    </a>
+	    <p>{{party.description}}</p>
+    	<div class="icon">
+        	<party-remove party="party"></party-remove>
+        	&nbsp;
+        	<span class="ion-edit"></span>
+        </div>
+    </ion-item>
+</ion-list>

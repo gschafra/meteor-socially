@@ -5,7 +5,7 @@ import uiRouter from 'angular-ui-router';
 import template from './partyDetails.html';
 
 class PartyDetails {
-	constructor($stateParams) {
+	constructor($scope, $reactive, $stateParams) {
 		'ngInject';
 
 		$reactive(this).attach($scope);
