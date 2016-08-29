@@ -1,4 +1,4 @@
-<party-add></party-add>
+<!--<party-add></party-add>-->
 <!-- <ul>
   <li ng-repeat="party in partiesList.parties">
     <a ui-sref="partyDetails({ partyId: party._id })">
@@ -17,7 +17,9 @@
     	<div class="icon">
         	<party-remove party="party"></party-remove>
         	&nbsp;
-        	<span class="ion-edit"></span>
+          <a ui-sref="partyAdd({ partyId: party._id })">
+        	  <span class="ion-edit"></span>
+          </a>
         </div>
     </ion-item>
 </ion-list>

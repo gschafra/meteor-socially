@@ -6,15 +6,21 @@ import template from './partyAdd.html';
 import { Parties } from '../../../api/parties';
 
 class PartyAdd {
-  constructor() {
+  constructor($scope, $reactive, $stateParams) {
+		'ngInject';
+
+		$reactive(this).attach($scope);
+
+		this.partyId = $stateParams.partyId;
+    console.log(this.partyId);
     this.party = {};
-  }
+	}
 
   submit() {
-	if (Meteor.isClient) {
-		var client = new ClientJS();
-		this.party.fingerprint = client.getFingerprint();
-	}
+    if (Meteor.isClient) {
+      var client = new ClientJS();
+      this.party.fingerprint = client.getFingerprint();
+    }
     Parties.insert(this.party);
     this.reset();
   }
@@ -33,4 +39,13 @@ export default angular.module(name, [
   template,
   controllerAs: name,
   controller: PartyAdd
-});
+}).config(config);
+
+function config($stateProvider) {
+  'ngInject';
+
+  $stateProvider.state('partyAdd', {
+    url: '/parties/edit/:partyId',
+    template: '<party-add></party-add>'
+  });
+}

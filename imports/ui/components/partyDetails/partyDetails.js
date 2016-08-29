@@ -10,7 +10,7 @@ class PartyDetails {
 
 		$reactive(this).attach($scope);
 
-		this.partyId = $stateParams.partyId
+		this.partyId = $stateParams.partyId;
 	}
 }
 
@@ -30,7 +30,7 @@ function config($stateProvider) {
   'ngInject';
 
   $stateProvider.state('partyDetails', {
-    url: '/parties/:partyId',
+    url: '/parties/details/:partyId',
     template: '<party-details></party-details>'
   });
 }
