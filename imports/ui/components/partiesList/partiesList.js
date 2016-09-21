@@ -17,6 +17,10 @@ class PartiesList {
       parties: () => Parties.find({})
     });
   }
+
+  edit() {
+    alert("blub");
+  }
 }
 
 const name = 'partiesList';
